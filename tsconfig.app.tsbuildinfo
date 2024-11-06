@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/keywordselector/list.tsx","./src/components/keywordselector/products.tsx","./src/components/keywordselector/root.tsx","./src/components/keywordselector/suffix.tsx","./src/components/keywordselector/index.ts","./src/contexts/keywordscontext.tsx"],"version":"5.6.2"}
