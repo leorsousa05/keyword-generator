@@ -39,6 +39,12 @@ export const Products = () => {
 		}
 	};
 
+	const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+		if (event.key === "Enter") {
+			handleAddProducts()
+		}
+	}
+
 	return (
 		<div className="keyword__container__form">
 			<div className="keyword__container__form__table">
@@ -60,7 +66,7 @@ export const Products = () => {
 				</table>
 			</div>
 			<div className="keyword__container__form__wrapper">
-				<input onInput={(e) => setInputKeywords(e.currentTarget.value)} value={inputKeywords} className="keyword__container__form__wrapper__input" name="products" type="text" placeholder="..." />
+				<input onInput={(e) => setInputKeywords(e.currentTarget.value)} value={inputKeywords} className="keyword__container__form__wrapper__input" name="products" type="text" placeholder="..." onKeyDown={handleKeyPress} />
 				<button onClick={handleAddProducts} className="keyword__container__form__wrapper__button">Adicionar</button>
 			</div>
 			<div className="keyword__container__form__import">

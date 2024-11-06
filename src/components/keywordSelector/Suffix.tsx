@@ -51,6 +51,12 @@ export const Suffix = () => {
 		}
 	};
 
+	const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+		if (event.key === "Enter") {
+			handleAddProducts()
+		}
+	}
+
 	return (
 		<div className="keyword__container__form">
 			<div className="keyword__container__form__table">
@@ -79,6 +85,7 @@ export const Suffix = () => {
 				<input
 					onChange={(e) => setBeforeInput(e.currentTarget.value)}
 					value={beforeInput}
+					onKeyDown={handleKeyPress}
 					className="keyword__container__form__wrapper__input"
 					name="before"
 					type="text"
@@ -86,6 +93,7 @@ export const Suffix = () => {
 				/>
 				<input
 					onChange={(e) => setAfterInput(e.currentTarget.value)}
+					onKeyDown={handleKeyPress}
 					value={afterInput}
 					className="keyword__container__form__wrapper__input--secondary"
 					name="after"
